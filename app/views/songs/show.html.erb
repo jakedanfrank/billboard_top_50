@@ -1,2 +1,5 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+<h1><%= @billboard.name %> - <%= @song.name %></h1>
+<p><%= @song.name %></p>
+<%= link_to "Edit Song", edit_department_path([@billboard, @song]) %>
+<%= link_to "Delete Song", [@billboard, @song], method: :delete %>
+<%= link_to "Back To Charts", billboard_songs_path(@billboard) %>

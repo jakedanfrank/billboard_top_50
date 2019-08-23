@@ -1,2 +1,12 @@
-<h1>WORLD RENOWNED TOP HITS</h1>
-<%= link_to "
+<h1><i class="fire icon"></i>     TOP HITS     <i class="fire icon"></i></i></h1>
+<i class="anchor icon"></i>
+<i class="fighter jet icon"></i>
+<i class="bicycle icon"></i>
+<%= link_to "Create a New Chart", new_billboard_path, class: "ui secondary basic button" %>
+  <ul>
+    <% @billboards.each do |billboard| %>
+     <div class="five ui buttons">
+        <%= link_to billboard.name, billboard, class: "ui purple basic button, right floated button" %>
+     </div>
+<% end %>
+  </ul>

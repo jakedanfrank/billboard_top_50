@@ -1,2 +1,7 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h1>Click a Song To Start Jammin</h1>
+<%= link_to "Add a New Song", new_billboard_song_path(@billboard) %>
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= link_to song.name, [@billboard, song] %></li>
+  <% end %>
+</ul>

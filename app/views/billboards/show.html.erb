@@ -1,2 +1,12 @@
-<h1>Billboards#show</h1>
-<p>Find me in app/views/billboards/show.html.erb</p>
+<h1><%= @billboard.name %></h1>
+<hr />
+<div class= "three ui buttons">
+<%= link_to "View Top Hits", billboards_path(@billboard),
+     class: "ui secondary basic button" %>
+<br />
+<br />
+<%= link_to "Edit Chart", edit_billboard_path(@billboard),
+     class: "ui positive basic button", data: {confirm: "Edit Chart?"} %>
+<%= link_to "Delete Chart", @billboard, method: :delete, 
+    class: "ui negative basic button", data: {confirm: "Delete Chart?"} %>
+</div>
